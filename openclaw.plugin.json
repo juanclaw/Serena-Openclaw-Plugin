@@ -1,0 +1,67 @@
+{
+  "id": "serena-openclaw-plugin",
+  "name": "OpenClaw Serena",
+  "description": "Serena MCP integration for semantic code navigation and targeted code edits inside OpenClaw.",
+  "version": "0.1.0",
+  "uiHints": {
+    "enabled": { "label": "Enable Serena integration" },
+    "command": { "label": "Serena command", "placeholder": "auto | serena | uvx | /path/to/serena" },
+    "args": { "label": "Serena command arguments (optional; inferred when empty)", "advanced": true },
+    "cwd": { "label": "Working directory override", "advanced": true },
+    "autoStart": { "label": "Auto-start project sessions" },
+    "reuseSessions": { "label": "Reuse project sessions" },
+    "allowedRoots": { "label": "Allowed project roots" },
+    "projectMarkers": { "label": "Project root markers", "advanced": true },
+    "idleTimeoutSec": { "label": "Idle timeout (sec)", "advanced": true },
+    "maxSessions": { "label": "Max cached sessions", "advanced": true },
+    "startupTimeoutMs": { "label": "Startup timeout (ms)", "advanced": true },
+    "toolMode": { "label": "Tool exposure mode" },
+    "readOnly": { "label": "Read-only mode" },
+    "serenaToolAllowlist": { "label": "Allowed upstream Serena tools", "advanced": true },
+    "serenaToolDenylist": { "label": "Denied upstream Serena tools", "advanced": true },
+    "env": { "label": "Extra environment variables", "advanced": true }
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "enabled": { "type": "boolean" },
+      "command": { "type": "string" },
+      "args": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "cwd": { "type": "string" },
+      "env": {
+        "type": "object",
+        "additionalProperties": { "type": "string" }
+      },
+      "autoStart": { "type": "boolean" },
+      "reuseSessions": { "type": "boolean" },
+      "readOnly": { "type": "boolean" },
+      "toolMode": {
+        "type": "string",
+        "enum": ["normalized", "passthrough", "both"]
+      },
+      "allowedRoots": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "projectMarkers": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "idleTimeoutSec": { "type": "integer", "minimum": 30 },
+      "maxSessions": { "type": "integer", "minimum": 1 },
+      "startupTimeoutMs": { "type": "integer", "minimum": 1000 },
+      "serenaToolAllowlist": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "serenaToolDenylist": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    }
+  }
+}
