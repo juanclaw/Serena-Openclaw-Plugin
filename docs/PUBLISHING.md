@@ -31,8 +31,8 @@ Before publishing, confirm the final npm scope is really the one you want. Chang
 
 ### Release hygiene
 
-10. Review `README.md` for the final package name and install command.
-11. Review `openclaw.plugin.json` labels/schema for operator clarity.
+10. Review `README.md` for the final package name, install command, and bundled skill guidance.
+11. Review `openclaw.plugin.json` labels/schema and bundled `skills` paths for correctness.
 12. Confirm `LICENSE`, package version, and changelog/release notes are ready.
 13. If you have a public repository, add correct `repository`, `homepage`, and `bugs` fields to `package.json`.
 

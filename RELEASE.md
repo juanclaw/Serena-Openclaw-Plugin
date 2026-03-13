@@ -9,6 +9,7 @@
 - safer operator controls via allowed roots, read-only mode, and upstream tool allow/deny lists
 - per-project session reuse with idle and capacity eviction
 - publish-ready npm/OpenClaw plugin structure
+- bundled `serena` skill shipped with the plugin
 - automated test coverage and CI
 
 ## Validation completed

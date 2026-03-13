@@ -4,6 +4,8 @@ Serena MCP integration for OpenClaw as a publishable plugin.
 
 This plugin lets an OpenClaw agent use Serena as a first-class semantic coding backend instead of relying on ad-hoc shell commands. It is designed for people who want their agent to activate projects, inspect symbols, trace references, search semantically, and perform targeted code edits through a stable OpenClaw tool surface.
 
+The plugin also ships its own bundled skill, `serena`, so users get both the capability layer and the recommended agent workflow from a single install.
+
 ## Who this is for
 
 Use this plugin if you want:
@@ -62,6 +64,7 @@ After installation:
 2. Configure its launcher and safety settings.
 3. Restart the gateway.
 4. Ask your agent to use the exposed Serena tools.
+5. If plugin skills are enabled in OpenClaw, the bundled `serena` skill will load automatically with the plugin.
 
 ## Minimal OpenClaw configuration
 
@@ -232,6 +235,19 @@ That lets the agent browse and inspect code semantically while blocking semantic
 - `serenaToolDenylist`
   - always deny these upstream Serena tools
 
+## Bundled skill
+
+This plugin ships a bundled skill named `serena` under `skills/serena/`.
+
+That means users do not need a separate skill repo or separate `.skill` package to get the recommended Serena workflow guidance. When plugin skills are enabled, OpenClaw can load the bundled skill alongside the plugin tools.
+
+Use the bundled skill when you want another agent to:
+
+- prefer Serena for existing multi-file codebases
+- activate the project before semantic reads or edits
+- inspect symbols and references before changing code
+- prefer normalized Serena tools before passthrough
+
 ## Tool surface exposed to agents
 
 ### Normalized tools
@@ -354,9 +370,9 @@ Tool:
 Tool:
 - `serena_replace_symbol_body`
 
-## How to integrate this with a skill or another agent
+## How to integrate this with the bundled skill or another agent
 
-If you are building a skill or prompting another agent to use this plugin, guide it like this:
+If you are building another skill, or prompting another agent on top of this plugin, guide it like this:
 
 - prefer Serena tools for existing multi-file projects
 - activate the project before semantic reads or edits
@@ -439,6 +455,6 @@ A stable OpenClaw-facing API is better for agents and documentation. But Serena 
 
 It gives operators a simple safety switch: semantic navigation and search remain available, but semantic edits and obviously mutating passthrough tools are blocked.
 
-### Why a separate skill repository?
+### Why ship a bundled skill with the plugin?
 
-The plugin provides capability. The skill provides operating discipline and usage heuristics. Keeping them separate makes both independently reusable.
+The plugin provides capability. The bundled `serena` skill provides operating discipline and usage heuristics. Shipping both together keeps the workflow guidance aligned with the actual tool surface and gives users a better one-install experience.
