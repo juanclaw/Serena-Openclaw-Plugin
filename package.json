@@ -13,8 +13,8 @@
   },
   "files": [
     "dist",
-    "SKILL.md",
-    "references",
+    "src/skill/SKILL.md",
+    "src/skill/references",
     "openclaw.plugin.json",
     "README.md",
     "LICENSE"

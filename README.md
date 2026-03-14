@@ -4,7 +4,7 @@ Serena MCP integration for OpenClaw as a publishable plugin.
 
 This plugin lets an OpenClaw agent use Serena as a first-class semantic coding backend instead of relying on ad-hoc shell commands. It is designed for people who want their agent to activate projects, inspect symbols, trace references, search semantically, and perform targeted code edits through a stable OpenClaw tool surface.
 
-The plugin also ships its own bundled skill, `serena`, so users get both the capability layer and the recommended agent workflow from a single install.
+The plugin also ships its own bundled skill, `serena`, so users get both the capability layer and the recommended agent workflow from a single install. The bundled skill now lives under `src/SKILL.md` with supporting references under `src/references/`.
 
 ## Who this is for
 
@@ -237,7 +237,7 @@ That lets the agent browse and inspect code semantically while blocking semantic
 
 ## Bundled skill
 
-This plugin ships a bundled skill named `serena` at the plugin root (`SKILL.md`) with supporting references under `references/`.
+This plugin ships a bundled skill named `serena` under `src/skill/SKILL.md` with supporting references under `src/skill/references/`.
 
 That means users do not need a separate skill repo or separate `.skill` package to get the recommended Serena workflow guidance. When plugin skills are enabled, OpenClaw can load the bundled skill alongside the plugin tools.
 
