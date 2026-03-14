@@ -1,6 +1,6 @@
 {
   "id": "serena-openclaw-plugin",
-  "name": "OpenClaw Serena",
+  "name": "Serena Openclaw Plugin",
   "description": "Serena MCP integration for semantic code navigation and targeted code edits inside OpenClaw.",
   "version": "0.1.0",
   "skills": ["skills"],
