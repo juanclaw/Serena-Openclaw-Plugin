@@ -3,7 +3,7 @@
   "name": "Serena Openclaw Plugin",
   "description": "Serena MCP integration for semantic code navigation and targeted code edits inside OpenClaw.",
   "version": "0.1.0",
-  "skills": ["skills"],
+  "skills": ["."],
   "uiHints": {
     "enabled": { "label": "Enable Serena integration" },
     "command": { "label": "Serena command", "placeholder": "auto | serena | uvx | /path/to/serena" },

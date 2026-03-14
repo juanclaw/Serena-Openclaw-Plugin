@@ -237,7 +237,7 @@ That lets the agent browse and inspect code semantically while blocking semantic
 
 ## Bundled skill
 
-This plugin ships a bundled skill named `serena` under `skills/serena/`.
+This plugin ships a bundled skill named `serena` at the plugin root (`SKILL.md`) with supporting references under `references/`.
 
 That means users do not need a separate skill repo or separate `.skill` package to get the recommended Serena workflow guidance. When plugin skills are enabled, OpenClaw can load the bundled skill alongside the plugin tools.
 
