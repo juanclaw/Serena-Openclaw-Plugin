@@ -1,1 +1,3 @@
-node_modules/\ndist/\n*.log\n
+node_modules/
+dist/
+*.log
