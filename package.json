@@ -22,7 +22,12 @@
   "openclaw": {
     "extensions": [
       "./dist/index.js"
-    ]
+    ],
+    "compat": {
+      "pluginApi": "2026.3.13",
+      "minGatewayVersion": "2026.3.13",
+      "builtWithOpenClawVersion": "2026.3.13"
+    }
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
