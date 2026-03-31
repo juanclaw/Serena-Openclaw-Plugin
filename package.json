@@ -27,6 +27,9 @@
       "pluginApi": "2026.3.13",
       "minGatewayVersion": "2026.3.13",
       "builtWithOpenClawVersion": "2026.3.13"
+    },
+    "build": {
+      "openclawVersion": "2026.3.13"
     }
   },
   "scripts": {
