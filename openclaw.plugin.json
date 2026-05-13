@@ -3,7 +3,29 @@
   "name": "Serena Openclaw Plugin",
   "description": "Serena MCP integration for semantic code navigation and targeted code edits inside OpenClaw.",
   "version": "0.1.0",
-  "skills": ["src/skill"],
+  "skills": ["./skills"],
+  "contracts": {
+    "tools": [
+      "serena_activate_project",
+      "serena_session_status",
+      "serena_project_overview",
+      "serena_find_symbol",
+      "serena_find_references",
+      "serena_search_pattern",
+      "serena_read_symbol",
+      "serena_read_file",
+      "serena_list_dir",
+      "serena_find_file",
+      "serena_replace_symbol_body",
+      "serena_insert_after_symbol",
+      "serena_insert_before_symbol",
+      "serena_rename_symbol",
+      "serena_replace_content",
+      "serena_create_text_file",
+      "serena_execute_shell_command",
+      "serena_call_tool"
+    ]
+  },
   "uiHints": {
     "enabled": { "label": "Enable Serena integration" },
     "command": { "label": "Serena command", "placeholder": "auto | serena | uvx | /path/to/serena" },

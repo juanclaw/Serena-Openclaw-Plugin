@@ -1,6 +1,6 @@
 {
   "name": "serena-openclaw-plugin",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "OpenClaw plugin that integrates Serena MCP for semantic code navigation and editing.",
   "type": "module",
   "main": "dist/index.js",
@@ -13,23 +13,23 @@
   },
   "files": [
     "dist",
-    "src/skill/SKILL.md",
-    "src/skill/references",
+    "skills",
     "openclaw.plugin.json",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "CHANGELOG.md"
   ],
   "openclaw": {
     "extensions": [
       "./dist/index.js"
     ],
     "compat": {
-      "pluginApi": "2026.3.13",
+      "pluginApi": "2026.5.7",
       "minGatewayVersion": "2026.3.13",
-      "builtWithOpenClawVersion": "2026.3.13"
+      "builtWithOpenClawVersion": "2026.5.7"
     },
     "build": {
-      "openclawVersion": "2026.3.13"
+      "openclawVersion": "2026.5.7"
     }
   },
   "scripts": {
