@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.8
+
+### Changed
+
+- README: point bundled skill references at the new `skills/serena/` layout and document the standalone ClawHub slug (`serena-skill`).
+
 ## 0.1.7
 
 ### Changed
