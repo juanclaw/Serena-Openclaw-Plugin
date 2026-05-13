@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.7
+
+### Changed
+
+- Ship `dist/` in the repository so ClawHub `package publish --family code-plugin` can package the plugin from a clean GitHub checkout without invoking the local TypeScript compiler.
+- Drop the `prepare: "npm run build"` lifecycle script. ClawHub publish runs `npm pack` inside a temp checkout that has no devDependencies, so `prepare → tsc` was failing with `'tsc' is not recognized`. `prepublishOnly` is removed for the same reason; build remains available as a manual `npm run build`.
+
 ## 0.1.6
 
 ### Changed

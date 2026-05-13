@@ -1,6 +1,6 @@
 {
   "name": "serena-openclaw-plugin",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "OpenClaw plugin that integrates Serena MCP for semantic code navigation and editing.",
   "type": "module",
   "main": "dist/index.js",
@@ -36,9 +36,7 @@
     "build": "tsc -p tsconfig.json",
     "check": "tsc -p tsconfig.json --noEmit",
     "clean": "rm -rf dist",
-    "prepare": "npm run build",
-    "test": "npm run build && node --test test/**/*.test.mjs",
-    "prepublishOnly": "npm run check && npm test",
+    "test": "node --test test/**/*.test.mjs",
     "pack:check": "npm pack --dry-run"
   },
   "keywords": [
